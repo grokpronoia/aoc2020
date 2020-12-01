@@ -14,6 +14,10 @@ ans:(exec a from tt where i=n1)*(exec a from tt where i=n2)
 rtt:.z.T-st
 rtt
 
+/combinging all of the above in 2 lines
+wn:raze{x+exec a from tt}'[tt[;`a]]
+ans:(exec a from tt where i=(floor (wn?2020)%(count tt)))*(exec a from tt where i=(raze{x+exec a from tt}'[tt[;`a]](floor (wn?2020)%(count tt)))?2020)
+
 /1.1 - another way
 \ts show(*) over ((*) over "j"$(1#a where {$[2020 in x;1b;0b]}'[sum each a::(cross/)(tt[;`a];tt[`a])]))
 
