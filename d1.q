@@ -1,6 +1,5 @@
 i:read0 `$"1.txt"
-t:([]a:"J"${-1_x}'[i])
-tt:select from t where not null a
+tt:select from t:([]a:"J"${-1_x}'[i]) where not null a
 
 /1.1 - find the 2 numbers in list that equal 2020
 st:.z.T
