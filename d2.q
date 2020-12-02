@@ -1,4 +1,4 @@
-i:read0 `pp.txt
+i:read0 `2.txt
 tt:select from t:([]a:i) where a like "[0-9]*"
 update a:" " vs'{ssr[x;":";""]}'[tt[;`a]] from `tt;
 
