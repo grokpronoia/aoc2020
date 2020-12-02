@@ -22,8 +22,8 @@ cs11:{wn::raze{x+exec a from tt}'[tt[;`a]];
 
 /1.1 - another way
 -1"Let's do it another way 1.1...";
-\ts show(*) over ((*) over "j"$(1#a where {$[2020 in x;1b;0b]}'[sum each a::(cross/)(tt[;`a];tt[`a])]))
+\ts show (*) over'("j"$(1#a where {$[2020 in x;1b;0b]}'[sum each a::(cross/)(tt[;`a];tt[`a])]))
 
 /1.2 - find the 3 numbers in list that equal 2020
 -1"Solution 1.2...";
-\ts show(*) over ((*) over "j"$(1#a where {$[2020 in x;1b;0b]}'[sum each a::(cross/)(tt[;`a];tt[`a];tt[;`a])]))
+\ts show (*) over'("j"$(1#a where {$[2020 in x;1b;0b]}'[sum each a::(cross/)(tt[;`a];tt[`a];tt[;`a])]))
