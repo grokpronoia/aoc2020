@@ -31,7 +31,6 @@ show tree
 -1"Part 2";
 /How to not call t[;`xfaa] everytime we want fresh data?
 /How to write as a single function?
-
 n11:t[;`xfaa]
 s11:{fc11:{1 _ x}'[n11];
   fc11::1 _ fc11;
