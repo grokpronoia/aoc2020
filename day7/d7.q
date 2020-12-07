@@ -11,9 +11,6 @@ a:","vs'noa
 /joined the above
 a:","vs'{ssr[x;"no_other";""]}'[{ssr[x;" ";"_"]}'[{ssr[x;", ";","]}'[{ssr[x;" bag";""]}'[{ssr[x;" bags";""]}'[{ssr[x;" contain ";", "]}'[{-1 _ x}'[i]]]]]]]
 
-c:"J"${1#x}''[{1 _ x}'[a]]
-sC:sum each c
-
 sb:`${1#x}'[a]
 sbib:`${x}''[{2 _ x}''[{1 _ x}'[a]]]
 
@@ -27,7 +24,7 @@ step:{pcnt::count distinct wb;
  }
 \ts step[]
 
-t:([]col:sb;bb:sbib;cnt:c)
+t:([]col:sb;bb:sbib;cnt:"J"${1#x}''[{1 _ x}'[a]])
 sg:select from t where raze(col in `shiny_gold)
 b:exec bb from sg
 ct:exec cnt from sg
