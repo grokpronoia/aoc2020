@@ -11,13 +11,11 @@ a:","vs'noa
 /joined the above
 a:","vs'{ssr[x;"no_other";""]}'[{ssr[x;" ";"_"]}'[{ssr[x;", ";","]}'[{ssr[x;" bag";""]}'[{ssr[x;" bags";""]}'[{ssr[x;" contain ";", "]}'[{-1 _ x}'[i]]]]]]]
 
-b:{1#x}'[a]
-bib:{2 _ x}''[{1 _ x}'[a]]
 c:"J"${1#x}''[{1 _ x}'[a]]
 sC:sum each c
 
-sb:`$b
-sbib:`${x}''[bib]
+sb:`${1#x}'[a]
+sbib:`${x}''[{2 _ x}''[{1 _ x}'[a]]]
 
 cnt:count where {`shiny_gold in x}'[sbib]
 wb:sb where {`shiny_gold in x}'[sbib]
