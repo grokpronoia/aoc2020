@@ -1,3 +1,5 @@
+\c 2000 2000
+
 i:read0 `7.txt
 ii:{-1 _ x}'[i]
 ii:{ssr[x;" contain ";", "]}'[ii]
@@ -30,11 +32,16 @@ b:exec bb from sg
 ct:exec cnt from sg
 tc:ct
 
-sg:raze{[x;y]x#select from t where raze(col in y)}'[ct;b]
-b:raze raze{exec bb from x}'[sg]
-b:b where {$[not x in `;1b;0b]}'[b]
-ct:raze raze{exec cnt from x}'[sg]
-ct:ct where {$[not x in 0N;1b;0b]}'[ct]
-show sum raze tc,:raze ct
-/if[0=count b;show sum raze tc,:raze cc]
-/if[not 0=count bb;tc,:raze cc;step2[]]
+step2:{sg:raze{[x;y]x#select from t where raze(col in y)}'[ct;b];
+  b::enlist b;
+  ct::enlist ct;
+  b,::{exec bb from x}'[sg];
+  b::raze raze(1 _ b);
+  b::b where {$[not x in `;1b;0b]}'[b];
+  ct,::{exec cnt from x}'[sg];
+  ct::raze raze(1 _ ct);
+  ct::ct where {$[not x in 0N;1b;0b]}'[ct];
+  if[0=count b;show sum raze tc,:raze ct];
+  if[not 0=count b;tc,:raze ct;step2[]]
+ }
+\ts step2[]
